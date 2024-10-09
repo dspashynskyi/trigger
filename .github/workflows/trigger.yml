@@ -3,6 +3,13 @@ on:
     branches:
       - main
 jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple job
+        run: |
+          echo ${{ github.repository }}
+
   trigger:
     uses: dspashynskyi/worklows/.github/workflows/flow1.yml@main
     with:
